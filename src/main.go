@@ -87,13 +87,13 @@ func createContainer (
 	log.Printf("Criando um novo container chamado %q", containerName)
 
 	imageSpecs := containerd.WithNewSpec(
-																			oci.WithDefaultSpec(),
-																			oci.WithImageConfig(image),
-																			oci.WithEnv([]string{"PORT=8080"}),
-																			oci.WithHostNamespace(specs.NetworkNamespace),
-																			oci.WithHostHostsFile,
-																			oci.WithHostResolvconf,
-																			)
+		oci.WithDefaultSpec(),
+		oci.WithImageConfig(image),
+		oci.WithEnv([]string{"PORT=8080"}),
+		oci.WithHostNamespace(specs.NetworkNamespace),
+		oci.WithHostHostsFile,
+		oci.WithHostResolvconf,
+		)
 
 	container, err := client.NewContainer(
 		ctx,
