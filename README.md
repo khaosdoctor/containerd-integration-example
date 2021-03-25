@@ -10,5 +10,5 @@
 After cloning the repository in any directory of your linux machine:
 
 1. `go get` to fetch the modules
-2. `go build main.go` to build the binary
+2. `go build src/main.go` to build the binary
 3. `sudo ./main` to run the application
